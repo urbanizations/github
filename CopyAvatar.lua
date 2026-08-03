@@ -1,1 +1,472 @@
-if _G.AxelliosR6GuiLoaded then if _G.AxelliosNotify then _G.AxelliosNotify(string.char(65,120,101,108,108,105,111,115,32,85,73),string.char(71,85,73,32,105,115,32,97,108,114,101,97,100,121,32,97,99,116,105,118,101,46),2)end return end _G.AxelliosR6GuiLoaded=true local _a=game:GetService(string.char(80,108,97,121,101,114,115))local _b=game:GetService(string.char(84,119,101,101,110,83,101,114,118,105,99,101))local _c=game:GetService(string.char(72,116,116,112,83,101,114,118,105,99,101))local _d=game:GetService(string.char(67,111,114,101,71,117,105))local _e=game:GetService(string.char(85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101))local _f=_a._f local _g=nil local _h pcall(function()if gethui then _h=gethui()elseif cloneref then _h=cloneref(_d)else _h=_f:WaitForChild(string.char(80,108,97,121,101,114,71,117,105))end end)local _i=Instance.new(string.char(83,99,114,101,101,110,71,117,105))_i.Name=string.char(65,120,101,108,108,105,111,115,95,78,111,116,105,102,95).._c:GenerateGUID(false):sub(1,8)_i.ResetOnSpawn=false _i.ZIndexBehavior=Enum.ZIndexBehavior.Sibling pcall(function()_i.Parent=_h end)local _j=Instance.new(string.char(70,114,97,109,101))_j.Name=string.char(72,111,108,100,101,114)_j.Size=UDim2.new(0,320,1,0)_j.Position=UDim2.new(0.5,0,0,18)_j.AnchorPoint=Vector2.new(0.5,0)_j.BackgroundTransparency=1 _j.Parent=_i local _k=Instance.new(string.char(85,73,76,105,115,116,76,97,121,111,117,116))_k.SortOrder=Enum.SortOrder.LayoutOrder _k.Padding=UDim.new(0,8)_k.HorizontalAlignment=Enum.HorizontalAlignment.Center _k.Parent=_j local _l={WIDTH=310,HEIGHT=46,ACCENT_COLOR=Color3.fromRGB(0,230,255),BG_COLOR=Color3.fromRGB(12,14,20),TEXT_COLOR=Color3.fromRGB(245,245,250),SUBTEXT_COLOR=Color3.fromRGB(150,160,180)}local function _m(_n,_o,_p)_p=_p or 2.5 local _q=Instance.new(string.char(70,114,97,109,101))_q.Size=UDim2.new(0,_l.WIDTH,0,_l.HEIGHT)_q.BackgroundColor3=_l.BG_COLOR _q.BackgroundTransparency=0.15 _q.BorderSizePixel=0 _q.ClipsDescendants=true _q.Parent=_j Instance.new(string.char(85,73,67,111,114,110,101,114),_q).CornerRadius=UDim.new(0,10)local _r=Instance.new(string.char(85,73,83,116,114,111,107,101))_r.Color=_l.ACCENT_COLOR _r.Thickness=1 _r.Transparency=0.75 _r.Parent=_q local _s=Instance.new(string.char(70,114,97,109,101))_s.Size=UDim2.new(0,8,0,8)_s.Position=UDim2.new(0,14,0.5,-4)_s.BackgroundColor3=_l.ACCENT_COLOR _s.BorderSizePixel=0 _s.Parent=_q Instance.new(string.char(85,73,67,111,114,110,101,114),_s).CornerRadius=UDim.new(1,0)local _t=Instance.new(string.char(84,101,120,116,76,97,98,101,108))_t.Size=UDim2.new(1,-36,0,16)_t.Position=UDim2.new(0,30,0,7)_t.BackgroundTransparency=1 _t.Text=_n _t.TextColor3=_l.TEXT_COLOR _t.Font=Enum.Font.GothamBold _t.TextSize=12 _t.TextXAlignment=Enum.TextXAlignment.Left _t.Parent=_q local _u=Instance.new(string.char(84,101,120,116,76,97,98,101,108))_u.Size=UDim2.new(1,-36,0,14)_u.Position=UDim2.new(0,30,0,23)_u.BackgroundTransparency=1 _u.Text=_o _u.TextColor3=_l.SUBTEXT_COLOR _u.Font=Enum.Font.GothamMedium _u.TextSize=10 _u.TextTruncate=Enum.TextTruncate.AtEnd _u.TextXAlignment=Enum.TextXAlignment.Left _u.Parent=_q local _v=Instance.new(string.char(70,114,97,109,101))_v.Size=UDim2.new(1,-24,0,2)_v.Position=UDim2.new(0,12,1,-4)_v.BackgroundColor3=Color3.fromRGB(255,255,255)_v.BackgroundTransparency=0.88 _v.BorderSizePixel=0 _v.Parent=_q Instance.new(string.char(85,73,67,111,114,110,101,114),_v).CornerRadius=UDim.new(1,0)local _w=Instance.new(string.char(70,114,97,109,101))_w.Size=UDim2.new(1,0,1,0)_w.BackgroundColor3=_l.ACCENT_COLOR _w.BorderSizePixel=0 _w.Parent=_v Instance.new(string.char(85,73,67,111,114,110,101,114),_w).CornerRadius=UDim.new(1,0)_q.Size=UDim2.new(0,0,0,_l.HEIGHT)_q.BackgroundTransparency=1 _t.TextTransparency=1 _u.TextTransparency=1 _s.BackgroundTransparency=1 _b:Create(_q,TweenInfo.new(0.25,Enum.EasingStyle.Quart,Enum.EasingDirection.Out),{Size=UDim2.new(0,_l.WIDTH,0,_l.HEIGHT),BackgroundTransparency=0.15}):Play()_b:Create(_t,TweenInfo.new(0.2),{TextTransparency=0}):Play()_b:Create(_u,TweenInfo.new(0.2),{TextTransparency=0}):Play()_b:Create(_s,TweenInfo.new(0.2),{BackgroundTransparency=0}):Play()_b:Create(_w,TweenInfo.new(_p,Enum.EasingStyle.Linear),{Size=UDim2.new(0,0,1,0)}):Play()task.delay(_p,function()local _x=_b:Create(_q,TweenInfo.new(0.2,Enum.EasingStyle.Quad,Enum.EasingDirection.In),{Size=UDim2.new(0,0,0,_l.HEIGHT),BackgroundTransparency=1})_b:Create(_t,TweenInfo.new(0.15),{TextTransparency=1}):Play()_b:Create(_u,TweenInfo.new(0.15),{TextTransparency=1}):Play()_b:Create(_s,TweenInfo.new(0.15),{BackgroundTransparency=1}):Play()_x:Play()_x.Completed:Connect(function()_q:Destroy()end)end)end _G.AxelliosNotify=_m local function _y(_z,_A)local _B=_A:FindFirstChild(string.char(72,97,110,100,108,101))if not _B or not _B:IsA(string.char(66,97,115,101,80,97,114,116))then return end _B.CanCollide=false _B.Anchored=false local _C=nil for _D,_E in ipairs(_B:GetChildren())do if _E:IsA(string.char(65,116,116,97,99,104,109,101,110,116))then _C=_E break end end local _F=nil local _H=nil if _C then for _D,_I in ipairs(_z:GetChildren())do if _I:IsA(string.char(66,97,115,101,80,97,114,116))then local _J=_I:FindFirstChild(_C.Name)if _J and _J:IsA(string.char(65,116,116,97,99,104,109,101,110,116))then _F=_I _H=_J break end end end end if not _F then _F=_z:FindFirstChild(string.char(72,101,97,100))end if _F then _A.Parent=_z if _C and _H then _B.CFrame=_H.WorldCFrame*_C.CFrame:Inverse()else if _A:IsA(string.char(65,99,99,111,117,116,114,101,109,101,110,116))or _A:IsA(string.char(72,97,116))then _B.CFrame=_F.CFrame*_A.AttachmentPoint:Inverse()else _B.CFrame=_F.CFrame end end local _K=Instance.new(string.char(87,101,108,100,67,111,110,115,116,114,97,105,110,116))_K.Name=string.char(65,120,101,108,108,105,111,115,65,99,99,87,101,108,100)_K.Part0=_B _K.Part1=_F _K.Parent=_B end end local function _L(_z,_M)if not _z or not _M or _M==""then return end local _N=_z:WaitForChild(string.char(72,117,109,97,110,111,105,100),5)local _O=_z:WaitForChild(string.char(72,101,97,100),5)if not _N or not _O then return end _m(string.char(65,120,101,108,108,105,111,115,32,77,111,114,112,104),string.char(70,101,116,99,104,105,110,103,32,64).._M..string.char(46,46,46),1.5)local _P,_Q=pcall(function()return _a:GetUserIdFromNameAsync(_M)end)if not _P or not _Q then _m(string.char(69,114,114,111,114),string.char(85,115,101,114,32,64).._M..string.char(32,110,111,116,32,102,111,117,110,100,33),3)return end local _R,_S=pcall(function()return _a:GetCharacterAppearanceAsync(_Q)end)if not _R or not _S then _m(string.char(69,114,114,111,114),string.char(70,97,105,108,101,100,32,116,111,32,102,101,116,99,104,32,97,118,97,116,97,114,32,100,97,116,97,46),3)return end for _D,_T in ipairs(_z:GetChildren())do if _T:IsA(string.char(65,99,99,101,115,115,111,114,121))or _T:IsA(string.char(65,99,99,111,117,116,114,101,109,101,110,116))or _T:IsA(string.char(83,104,105,114,116))or _T:IsA(string.char(80,97,110,116,115))or _T:IsA(string.char(83,104,105,114,116,71,114,97,112,104,105,99))or _T:IsA(string.char(66,111,100,121,67,111,108,111,114,115))or _T:IsA(string.char(67,104,97,114,97,99,116,101,114,77,101,115,104))then _T:Destroy()end end for _D,_E in ipairs(_O:GetChildren())do if _E:IsA(string.char(68,101,99,97,108))or _E:IsA(string.char(83,112,101,99,105,97,108,77,101,115,104))or _E:IsA(string.char(77,101,115,104))then _E:Destroy()end end for _D,_T in ipairs(_S:GetChildren())do if _T:IsA(string.char(65,99,99,101,115,115,111,114,121))or _T:IsA(string.char(65,99,99,111,117,116,114,101,109,101,110,116))then _y(_z,_T:Clone())elseif _T:IsA(string.char(67,104,97,114,97,99,116,101,114,77,101,115,104))then _T:Clone().Parent=_z elseif _T:IsA(string.char(68,101,99,97,108))then local _U=_T:Clone()_U.Name=string.char(102,97,99,101)_U.Parent=_O elseif _T:IsA(string.char(83,112,101,99,105,97,108,77,101,115,104))or _T:IsA(string.char(77,101,115,104))then _T:Clone().Parent=_O else _T:Clone().Parent=_z end end _S:Destroy()_g=_M _m(string.char(77,111,114,112,104,32,65,99,116,105,118,101),string.char(77,111,114,112,104,101,100,32,105,110,116,111,32,64).._M..string.char(33),2.5)end local _V=Instance.new(string.char(83,99,114,101,101,110,71,117,105))_V.Name=string.char(65,120,101,108,108,105,111,115,95,77,111,114,112,104,71,117,105,95).._c:GenerateGUID(false):sub(1,8)_V.ResetOnSpawn=false _V.ZIndexBehavior=Enum.ZIndexBehavior.Sibling pcall(function()_V.Parent=_h end)local _W=Instance.new(string.char(70,114,97,109,101))_W.Name=string.char(77,97,105,110,70,114,97,109,101)_W.Size=UDim2.new(0,260,0,125)_W.Position=UDim2.new(0,20,1,-20)_W.AnchorPoint=Vector2.new(0,1)_W.BackgroundColor3=Color3.fromRGB(12,14,20)_W.BackgroundTransparency=0.15 _W.BorderSizePixel=0 _W.ClipsDescendants=true _W.Parent=_V Instance.new(string.char(85,73,67,111,114,110,101,114),_W).CornerRadius=UDim.new(0,12)local _X=Instance.new(string.char(85,73,83,116,114,111,107,101))_X.Color=Color3.fromRGB(0,230,255)_X.Thickness=1 _X.Transparency=0.75 _X.Parent=_W local _Y=Instance.new(string.char(70,114,97,109,101))_Y.Name=string.char(84,105,116,108,101,66,97,114)_Y.Size=UDim2.new(1,0,0,30)_Y.BackgroundTransparency=1 _Y.Parent=_W local _Z=Instance.new(string.char(70,114,97,109,101))_Z.Size=UDim2.new(0,8,0,8)_Z.Position=UDim2.new(0,12,0.5,-4)_Z.BackgroundColor3=Color3.fromRGB(0,230,255)_Z.BorderSizePixel=0 _Z.Parent=_Y Instance.new(string.char(85,73,67,111,114,110,101,114),_Z).CornerRadius=UDim.new(1,0)local _t=Instance.new(string.char(84,101,120,116,76,97,98,101,108))_t.Size=UDim2.new(1,-50,1,0)_t.Position=UDim2.new(0,28,0,0)_t.BackgroundTransparency=1 _t.Text=string.char(65,88,69,76,76,73,79,83,32,77,79,82,80,72)_t.TextColor3=Color3.fromRGB(245,245,250)_t.Font=Enum.Font.GothamBold _t.TextSize=11 _t.TextXAlignment=Enum.TextXAlignment.Left _t.Parent=_Y local _aa=Instance.new(string.char(70,114,97,109,101))_aa.Size=UDim2.new(1,-24,0,34)_aa.Position=UDim2.new(0,12,0,36)_aa.BackgroundColor3=Color3.fromRGB(20,24,34)_aa.BorderSizePixel=0 _aa.Parent=_W Instance.new(string.char(85,73,67,111,114,110,101,114),_aa).CornerRadius=UDim.new(0,8)local _ba=Instance.new(string.char(85,73,83,116,114,111,107,101))_ba.Color=Color3.fromRGB(255,255,255)_ba.Thickness=1 _ba.Transparency=0.9 _ba.Parent=_aa local _ca=Instance.new(string.char(84,101,120,116,66,111,120))_ca.Size=UDim2.new(1,-16,1,0)_ca.Position=UDim2.new(0,8,0,0)_ca.BackgroundTransparency=1 _ca.Text=""_ca.PlaceholderText=string.char(69,110,116,101,114,32,84,97,114,103,101,116,32,85,115,101,114,110,97,109,101,46,46,46)_ca.PlaceholderColor3=Color3.fromRGB(110,120,140)_ca.TextColor3=Color3.fromRGB(255,255,255)_ca.Font=Enum.Font.GothamMedium _ca.TextSize=12 _ca.TextXAlignment=Enum.TextXAlignment.Left _ca.ClearTextOnFocus=false _ca.Parent=_aa local _da=Instance.new(string.char(84,101,120,116,66,117,116,116,111,110))_da.Size=UDim2.new(1,-24,0,32)_da.Position=UDim2.new(0,12,0,78)_da.BackgroundColor3=Color3.fromRGB(0,230,255)_da.BorderSizePixel=0 _da.Text=string.char(77,79,82,80,72,32,65,86,65,84,65,82)_da.TextColor3=Color3.fromRGB(10,12,18)_da.Font=Enum.Font.GothamBold _da.TextSize=11 _da.AutoButtonColor=true _da.Parent=_W Instance.new(string.char(85,73,67,111,114,110,101,114),_da).CornerRadius=UDim.new(0,8)local _ea,_fa,_ga,_ha _Y.InputBegan:Connect(function(_ia)if _ia.UserInputType==Enum.UserInputType.MouseButton1 or _ia.UserInputType==Enum.UserInputType.Touch then _ea=true _ga=_ia.Position _ha=_W.Position _ia.Changed:Connect(function()if _ia.UserInputState==Enum.UserInputState.End then _ea=false end end)end end)_Y.InputChanged:Connect(function(_ia)if _ia.UserInputType==Enum.UserInputType.MouseMovement or _ia.UserInputType==Enum.UserInputType.Touch then _fa=_ia end end)_e.InputChanged:Connect(function(_ia)if _ia==_fa and _ea then local _ja=_ia.Position-_ga _W.Position=UDim2.new(_ha.X.Scale,_ha.X.Offset+_ja.X,_ha.Y.Scale,_ha.Y.Offset+_ja.Y)end end)local function _ka()local _la=_ca.Text:gsub(string.char(37,115,43),"")if _la~=""then if _f.Character then _L(_f.Character,_la)end else _m(string.char(87,97,114,110,105,110,103),string.char(80,108,101,97,115,101,32,116,121,112,101,32,97,32,117,115,101,114,110,97,109,101,32,102,105,114,115,116,33),2)end end _da.MouseButton1Click:Connect(_ka)_ca.FocusLost:Connect(function(_ma)if _ma then _ka()end end)_f.CharacterAdded:Connect(function(_na)if _g then task.wait(0.5)_L(_na,_g)end end)_m(string.char(65,120,101,108,108,105,111,115,32,77,111,114,112,104),string.char(71,85,73,32,76,111,97,100,101,100,32,105,110,32,66,111,116,116,111,109,45,76,101,102,116,33),2.5)
+if _G.AxelliosR6GuiLoaded then
+    if _G.AxelliosNotify then
+        _G.AxelliosNotify("Axellios UI", "GUI is already active.", 2)
+    end
+    return
+end
+_G.AxelliosR6GuiLoaded = true
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║                            SERVICES                             ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local Players          = game:GetService("Players")
+local TweenService     = game:GetService("TweenService")
+local HttpService      = game:GetService("HttpService")
+local CoreGui          = game:GetService("CoreGui")
+local UserInputService = game:GetService("UserInputService")
+
+local LocalPlayer      = Players.LocalPlayer
+local currentTargetUser = nil
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║                      GUI PARENT SELECTION                       ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local guiParent
+pcall(function()
+    if gethui then
+        guiParent = gethui()
+    elseif cloneref then
+        guiParent = cloneref(CoreGui)
+    else
+        guiParent = LocalPlayer:WaitForChild("PlayerGui")
+    end
+end)
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║                  AXELLIOS UI NOTIFICATIONS                      ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local notificationGui = Instance.new("ScreenGui")
+notificationGui.Name = "Axellios_Notif_" .. HttpService:GenerateGUID(false):sub(1, 8)
+notificationGui.ResetOnSpawn = false
+notificationGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+pcall(function() notificationGui.Parent = guiParent end)
+
+local notificationHolder = Instance.new("Frame")
+notificationHolder.Name = "Holder"
+notificationHolder.Size = UDim2.new(0, 320, 1, 0)
+notificationHolder.Position = UDim2.new(0.5, 0, 0, 18)
+notificationHolder.AnchorPoint = Vector2.new(0.5, 0)
+notificationHolder.BackgroundTransparency = 1
+notificationHolder.Parent = notificationGui
+
+local notifLayout = Instance.new("UIListLayout")
+notifLayout.SortOrder = Enum.SortOrder.LayoutOrder
+notifLayout.Padding = UDim.new(0, 8)
+notifLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+notifLayout.Parent = notificationHolder
+
+local NOTIF_CONFIG = {
+    WIDTH = 310,
+    HEIGHT = 46,
+    ACCENT_COLOR = Color3.fromRGB(0, 230, 255),
+    BG_COLOR = Color3.fromRGB(12, 14, 20),
+    TEXT_COLOR = Color3.fromRGB(245, 245, 250),
+    SUBTEXT_COLOR = Color3.fromRGB(150, 160, 180)
+}
+
+local function Notify(titleText, messageText, duration)
+    duration = duration or 2.5
+
+    local container = Instance.new("Frame")
+    container.Size = UDim2.new(0, NOTIF_CONFIG.WIDTH, 0, NOTIF_CONFIG.HEIGHT)
+    container.BackgroundColor3 = NOTIF_CONFIG.BG_COLOR
+    container.BackgroundTransparency = 0.15
+    container.BorderSizePixel = 0
+    container.ClipsDescendants = true
+    container.Parent = notificationHolder
+
+    Instance.new("UICorner", container).CornerRadius = UDim.new(0, 10)
+
+    local stroke = Instance.new("UIStroke")
+    stroke.Color = NOTIF_CONFIG.ACCENT_COLOR
+    stroke.Thickness = 1
+    stroke.Transparency = 0.75
+    stroke.Parent = container
+
+    local statusDot = Instance.new("Frame")
+    statusDot.Size = UDim2.new(0, 8, 0, 8)
+    statusDot.Position = UDim2.new(0, 14, 0.5, -4)
+    statusDot.BackgroundColor3 = NOTIF_CONFIG.ACCENT_COLOR
+    statusDot.BorderSizePixel = 0
+    statusDot.Parent = container
+
+    Instance.new("UICorner", statusDot).CornerRadius = UDim.new(1, 0)
+
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Size = UDim2.new(1, -36, 0, 16)
+    titleLabel.Position = UDim2.new(0, 30, 0, 7)
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Text = titleText
+    titleLabel.TextColor3 = NOTIF_CONFIG.TEXT_COLOR
+    titleLabel.Font = Enum.Font.GothamBold
+    titleLabel.TextSize = 12
+    titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+    titleLabel.Parent = container
+
+    local messageLabel = Instance.new("TextLabel")
+    messageLabel.Size = UDim2.new(1, -36, 0, 14)
+    messageLabel.Position = UDim2.new(0, 30, 0, 23)
+    messageLabel.BackgroundTransparency = 1
+    messageLabel.Text = messageText
+    messageLabel.TextColor3 = NOTIF_CONFIG.SUBTEXT_COLOR
+    messageLabel.Font = Enum.Font.GothamMedium
+    messageLabel.TextSize = 10
+    messageLabel.TextTruncate = Enum.TextTruncate.AtEnd
+    messageLabel.TextXAlignment = Enum.TextXAlignment.Left
+    messageLabel.Parent = container
+
+    local progressBarBackground = Instance.new("Frame")
+    progressBarBackground.Size = UDim2.new(1, -24, 0, 2)
+    progressBarBackground.Position = UDim2.new(0, 12, 1, -4)
+    progressBarBackground.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    progressBarBackground.BackgroundTransparency = 0.88
+    progressBarBackground.BorderSizePixel = 0
+    progressBarBackground.Parent = container
+
+    Instance.new("UICorner", progressBarBackground).CornerRadius = UDim.new(1, 0)
+
+    local progressBar = Instance.new("Frame")
+    progressBar.Size = UDim2.new(1, 0, 1, 0)
+    progressBar.BackgroundColor3 = NOTIF_CONFIG.ACCENT_COLOR
+    progressBar.BorderSizePixel = 0
+    progressBar.Parent = progressBarBackground
+
+    Instance.new("UICorner", progressBar).CornerRadius = UDim.new(1, 0)
+
+    container.Size = UDim2.new(0, 0, 0, NOTIF_CONFIG.HEIGHT)
+    container.BackgroundTransparency = 1
+    titleLabel.TextTransparency = 1
+    messageLabel.TextTransparency = 1
+    statusDot.BackgroundTransparency = 1
+
+    TweenService:Create(container, TweenInfo.new(0.25, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {
+        Size = UDim2.new(0, NOTIF_CONFIG.WIDTH, 0, NOTIF_CONFIG.HEIGHT),
+        BackgroundTransparency = 0.15
+    }):Play()
+
+    TweenService:Create(titleLabel, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+    TweenService:Create(messageLabel, TweenInfo.new(0.2), {TextTransparency = 0}):Play()
+    TweenService:Create(statusDot, TweenInfo.new(0.2), {BackgroundTransparency = 0}):Play()
+
+    TweenService:Create(progressBar, TweenInfo.new(duration, Enum.EasingStyle.Linear), {
+        Size = UDim2.new(0, 0, 1, 0)
+    }):Play()
+
+    task.delay(duration, function()
+        local fadeOut = TweenService:Create(container, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {
+            Size = UDim2.new(0, 0, 0, NOTIF_CONFIG.HEIGHT),
+            BackgroundTransparency = 1
+        })
+        TweenService:Create(titleLabel, TweenInfo.new(0.15), {TextTransparency = 1}):Play()
+        TweenService:Create(messageLabel, TweenInfo.new(0.15), {TextTransparency = 1}):Play()
+        TweenService:Create(statusDot, TweenInfo.new(0.15), {BackgroundTransparency = 1}):Play()
+        
+        fadeOut:Play()
+        fadeOut.Completed:Connect(function()
+            container:Destroy()
+        end)
+    end)
+end
+_G.AxelliosNotify = Notify
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║           MANUAL ACCESSORY WELDING SYSTEM FOR R6               ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local function WeldAccessoryR6(character, accClone)
+    local handle = accClone:FindFirstChild("Handle")
+    if not handle or not handle:IsA("BasePart") then return end
+
+    handle.CanCollide = false
+    handle.Anchored = false
+
+    local handleAttachment = nil
+    for _, child in ipairs(handle:GetChildren()) do
+        if child:IsA("Attachment") then
+            handleAttachment = child
+            break
+        end
+    end
+
+    local targetPart = nil
+    local targetAttachment = nil
+
+    if handleAttachment then
+        for _, part in ipairs(character:GetChildren()) do
+            if part:IsA("BasePart") then
+                local match = part:FindFirstChild(handleAttachment.Name)
+                if match and match:IsA("Attachment") then
+                    targetPart = part
+                    targetAttachment = match
+                    break
+                end
+            end
+        end
+    end
+
+    if not targetPart then
+        targetPart = character:FindFirstChild("Head")
+    end
+
+    if targetPart then
+        accClone.Parent = character
+        
+        if handleAttachment and targetAttachment then
+            handle.CFrame = targetAttachment.WorldCFrame * handleAttachment.CFrame:Inverse()
+        else
+            if accClone:IsA("Accoutrement") or accClone:IsA("Hat") then
+                handle.CFrame = targetPart.CFrame * accClone.AttachmentPoint:Inverse()
+            else
+                handle.CFrame = targetPart.CFrame
+            end
+        end
+
+        local weld = Instance.new("WeldConstraint")
+        weld.Name = "AxelliosAccWeld"
+        weld.Part0 = handle
+        weld.Part1 = targetPart
+        weld.Parent = handle
+    end
+end
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║                  R6 MORPH LOGIC BY USERNAME                     ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local function ApplyR6Morph(character, username)
+    if not character or not username or username == "" then return end
+    local humanoid = character:WaitForChild("Humanoid", 5)
+    local head = character:WaitForChild("Head", 5)
+    if not humanoid or not head then return end
+
+    Notify("Axellios Morph", "Fetching @" .. username .. "...", 1.5)
+
+    -- Resolve Username to UserId
+    local idOk, userId = pcall(function()
+        return Players:GetUserIdFromNameAsync(username)
+    end)
+
+    if not idOk or not userId then
+        Notify("Error", "User @" .. username .. " not found!", 3)
+        return
+    end
+
+    -- Download Appearance Container
+    local appOk, appearanceModel = pcall(function()
+        return Players:GetCharacterAppearanceAsync(userId)
+    end)
+
+    if not appOk or not appearanceModel then
+        Notify("Error", "Failed to fetch avatar data.", 3)
+        return
+    end
+
+    -- Wipe existing body items
+    for _, item in ipairs(character:GetChildren()) do
+        if item:IsA("Accessory") 
+            or item:IsA("Accoutrement") 
+            or item:IsA("Shirt") 
+            or item:IsA("Pants") 
+            or item:IsA("ShirtGraphic") 
+            or item:IsA("BodyColors") 
+            or item:IsA("CharacterMesh") then
+            item:Destroy()
+        end
+    end
+
+    -- Wipe head decals and meshes
+    for _, child in ipairs(head:GetChildren()) do
+        if child:IsA("Decal") or child:IsA("SpecialMesh") or child:IsA("Mesh") then
+            child:Destroy()
+        end
+    end
+
+    -- Inject assets
+    for _, item in ipairs(appearanceModel:GetChildren()) do
+        if item:IsA("Accessory") or item:IsA("Accoutrement") then
+            WeldAccessoryR6(character, item:Clone())
+        elseif item:IsA("CharacterMesh") then
+            item:Clone().Parent = character
+        elseif item:IsA("Decal") then
+            local faceClone = item:Clone()
+            faceClone.Name = "face"
+            faceClone.Parent = head
+        elseif item:IsA("SpecialMesh") or item:IsA("Mesh") then
+            item:Clone().Parent = head
+        else
+            item:Clone().Parent = character
+        end
+    end
+
+    appearanceModel:Destroy()
+    currentTargetUser = username
+    Notify("Morph Active", "Morphed into @" .. username .. "!", 2.5)
+end
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║                  BOTTOM-LEFT DRAGGABLE GUI                      ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local mainGui = Instance.new("ScreenGui")
+mainGui.Name = "Axellios_MorphGui_" .. HttpService:GenerateGUID(false):sub(1, 8)
+mainGui.ResetOnSpawn = false
+mainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+pcall(function() mainGui.Parent = guiParent end)
+
+-- Main Frame (Spawns Bottom-Left: Positioned 20px off bottom/left edges)
+local mainFrame = Instance.new("Frame")
+mainFrame.Name = "MainFrame"
+mainFrame.Size = UDim2.new(0, 260, 0, 125)
+mainFrame.Position = UDim2.new(0, 20, 1, -20)
+mainFrame.AnchorPoint = Vector2.new(0, 1)
+mainFrame.BackgroundColor3 = Color3.fromRGB(12, 14, 20)
+mainFrame.BackgroundTransparency = 0.15
+mainFrame.BorderSizePixel = 0
+mainFrame.ClipsDescendants = true
+mainFrame.Parent = mainGui
+
+Instance.new("UICorner", mainFrame).CornerRadius = UDim.new(0, 12)
+
+local frameStroke = Instance.new("UIStroke")
+frameStroke.Color = Color3.fromRGB(0, 230, 255)
+frameStroke.Thickness = 1
+frameStroke.Transparency = 0.75
+frameStroke.Parent = mainFrame
+
+-- Title Header Bar
+local titleBar = Instance.new("Frame")
+titleBar.Name = "TitleBar"
+titleBar.Size = UDim2.new(1, 0, 0, 30)
+titleBar.BackgroundTransparency = 1
+titleBar.Parent = mainFrame
+
+local titleDot = Instance.new("Frame")
+titleDot.Size = UDim2.new(0, 8, 0, 8)
+titleDot.Position = UDim2.new(0, 12, 0.5, -4)
+titleDot.BackgroundColor3 = Color3.fromRGB(0, 230, 255)
+titleDot.BorderSizePixel = 0
+titleDot.Parent = titleBar
+
+Instance.new("UICorner", titleDot).CornerRadius = UDim.new(1, 0)
+
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Size = UDim2.new(1, -50, 1, 0)
+titleLabel.Position = UDim2.new(0, 28, 0, 0)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "AXELLIOS MORPH"
+titleLabel.TextColor3 = Color3.fromRGB(245, 245, 250)
+titleLabel.Font = Enum.Font.GothamBold
+titleLabel.TextSize = 11
+titleLabel.TextXAlignment = Enum.TextXAlignment.Left
+titleLabel.Parent = titleBar
+
+-- TextBox for Username Input
+local textBoxFrame = Instance.new("Frame")
+textBoxFrame.Size = UDim2.new(1, -24, 0, 34)
+textBoxFrame.Position = UDim2.new(0, 12, 0, 36)
+textBoxFrame.BackgroundColor3 = Color3.fromRGB(20, 24, 34)
+textBoxFrame.BorderSizePixel = 0
+textBoxFrame.Parent = mainFrame
+
+Instance.new("UICorner", textBoxFrame).CornerRadius = UDim.new(0, 8)
+
+local textBoxStroke = Instance.new("UIStroke")
+textBoxStroke.Color = Color3.fromRGB(255, 255, 255)
+textBoxStroke.Thickness = 1
+textBoxStroke.Transparency = 0.9
+textBoxStroke.Parent = textBoxFrame
+
+local usernameBox = Instance.new("TextBox")
+usernameBox.Size = UDim2.new(1, -16, 1, 0)
+usernameBox.Position = UDim2.new(0, 8, 0, 0)
+usernameBox.BackgroundTransparency = 1
+usernameBox.Text = ""
+usernameBox.PlaceholderText = "Enter Target Username..."
+usernameBox.PlaceholderColor3 = Color3.fromRGB(110, 120, 140)
+usernameBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+usernameBox.Font = Enum.Font.GothamMedium
+usernameBox.TextSize = 12
+usernameBox.TextXAlignment = Enum.TextXAlignment.Left
+usernameBox.ClearTextOnFocus = false
+usernameBox.Parent = textBoxFrame
+
+-- Morph Action Button
+local morphButton = Instance.new("TextButton")
+morphButton.Size = UDim2.new(1, -24, 0, 32)
+morphButton.Position = UDim2.new(0, 12, 0, 78)
+morphButton.BackgroundColor3 = Color3.fromRGB(0, 230, 255)
+morphButton.BorderSizePixel = 0
+morphButton.Text = "MORPH AVATAR"
+morphButton.TextColor3 = Color3.fromRGB(10, 12, 18)
+morphButton.Font = Enum.Font.GothamBold
+morphButton.TextSize = 11
+morphButton.AutoButtonColor = true
+morphButton.Parent = mainFrame
+
+Instance.new("UICorner", morphButton).CornerRadius = UDim.new(0, 8)
+
+-- Smooth GUI Dragging System
+local dragging, dragInput, dragStart, startPos
+
+titleBar.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        dragging = true
+        dragStart = input.Position
+        startPos = mainFrame.Position
+        
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+titleBar.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        local delta = input.Position - dragStart
+        mainFrame.Position = UDim2.new(
+            startPos.X.Scale, 
+            startPos.X.Offset + delta.X, 
+            startPos.Y.Scale, 
+            startPos.Y.Offset + delta.Y
+        )
+    end
+end)
+
+-- ╔═════════════════════════════════════════════════════════════════╗
+-- ║                   EVENT TRIGGER HANDLERS                        ║
+-- ╚═════════════════════════════════════════════════════════════════╝
+local function TriggerMorph()
+    local inputUser = usernameBox.Text:gsub("%s+", "")
+    if inputUser ~= "" then
+        if LocalPlayer.Character then
+            ApplyR6Morph(LocalPlayer.Character, inputUser)
+        end
+    else
+        Notify("Warning", "Please type a username first!", 2)
+    end
+end
+
+-- Button Click Trigger
+morphButton.MouseButton1Click:Connect(TriggerMorph)
+
+-- Enter Key Trigger inside TextBox
+usernameBox.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        TriggerMorph()
+    end
+end)
+
+-- Auto-Reapply Morph on Respawn/Reset
+LocalPlayer.CharacterAdded:Connect(function(newCharacter)
+    if currentTargetUser then
+        task.wait(0.5)
+        ApplyR6Morph(newCharacter, currentTargetUser)
+    end
+end)
+
+Notify("Axellios Morph", "GUI Loaded in Bottom-Left!", 2.5)
