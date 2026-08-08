@@ -1,5 +1,5 @@
 -- too lazy to obf so its open source
--- partly made by ai
+-- made by ai
 -- pretty sure its only r6 idk
 if _G.AxelliosR6GuiLoaded then
     if _G.AxelliosNotify then
